@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+#array-container{
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    margin-top: 20px;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.bar{
+    width: 25px;
+    margin: 2px;
+    background-color: blue;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    align-items: flex-start;
+}
