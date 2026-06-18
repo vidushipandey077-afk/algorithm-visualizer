@@ -8,9 +8,29 @@
 </head>
 <body>
     <h1>Algorithm Visualizer</h1>
-    <button onclick="generateArray()">New Array</button>
+    <div id="allBtns">
+        <button id="newArray">New Array</button>
+        <button id="bubbleSort">Bubble Sort</button>
+        <button id="selectionSort">Selection Sort</button>
+        <button id="insertionSort">Insertion Sort</button>
+        <button id="mergeSort">Merge Sort</button>
+        <button id="quickSort">Quick Sort</button>
+    </div>
+    <div class="sliders">
+        <label for="arraySize">Array Size: <span id="arraySizeValue">30</span></label>
+        <input type="range" id="arraySize" min="10" max="50" value="30">
+
+        <label for="speed">Speed: <span id="speedValue">100</span></label>
+        <input type="range" id="speed" min="10" max="500" value="100">
+    </div>
+    <p>Status: <span id="status">Ready</span></p>
     <div id="array-container"></div>
-    <button onclick="bubbleSort()">Bubble Sort</button>
+    <div class="info">
+        <p>Algorithm: <span id="algo">None</span></p>
+        <p>Time Complexity: <span id="time">-</span></p>
+        <p>Space Complexity: <span id="space">-</span></p>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
