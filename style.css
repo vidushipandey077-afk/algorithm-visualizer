@@ -91,3 +91,12 @@ p{
 h1{
     margin-bottom: 30px;
 }
+.minimum{
+    background-color: purple;
+}
+.current{
+    background-color: purple;
+}
+.shifted{
+    background-color: yellow;
+}
