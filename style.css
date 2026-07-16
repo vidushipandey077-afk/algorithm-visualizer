@@ -1,5 +1,5 @@
 body{
-    margin: 0%;
+    margin: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
@@ -17,8 +17,10 @@ body{
 }
 .bar{
     display: flex;
+    flex: 1;
     justify-content: center;
-    width: 25px;
+    max-width: 25px;
+    min-width: 4px;
     margin: 2px;
     background-color: rgb(21, 182, 120);
     text-align: center;
@@ -47,10 +49,10 @@ body{
     gap: 20px;
 }
 button{
-    padding: 10px 20px;
+    padding: 8px 14px;
+    font-size: 14px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 15px;
     transition: 0.3s;
     background-color:#222;
     color:white;
@@ -99,4 +101,23 @@ h1{
 }
 .shifted{
     background-color: yellow;
+}
+@media (max-width:768px) {
+    .sliders{
+        flex-direction: column;
+        gap: 15px;
+    }
+    input[type="range"]{
+        width: 90%;
+    }
+    #array-container{
+        height: 300px;
+        padding: 5px;
+    }
+    .bar{
+        font-size: 0;
+    }
+    body{
+        padding: 10px;
+    } 
 }
