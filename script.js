@@ -16,6 +16,7 @@ const space=document.getElementById("space")
 
 let arr=[];
 
+updateArrayLimit();
 generateArray();
 
 newArray.addEventListener('click',generateArray)
@@ -26,6 +27,7 @@ selectionSort.addEventListener('click',selectionSortAlgo)
 insertionSort.addEventListener('click',insertionSortAlgo)
 mergeSort.addEventListener('click',mergeSortAlgoCall)
 quickSort.addEventListener('click',quickSortAlgoCall)
+window.addEventListener("resize", updateArrayLimit);
 
 async function bubbleSortAlgo(){
     status.textContent="Sorting..."
@@ -461,6 +463,18 @@ function changeArraySize(){
     generateArray();
 }
 
+function updateArrayLimit() {
+    if (window.innerWidth <= 768) {
+        arraySize.max = 30;
+        if (Number(arraySize.value) > 30) {
+            arraySize.value = 30;
+            arraySizeValue.textContent = 30;
+            generateArray();
+        }
+    } else {
+        arraySize.max = 50;
+    }
+}
 
 function generateArray(){
     algo.textContent="None";
