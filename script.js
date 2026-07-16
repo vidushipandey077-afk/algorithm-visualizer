@@ -464,16 +464,15 @@ function changeArraySize(){
 }
 
 function updateArrayLimit() {
-    if (window.innerWidth <= 768) {
+    if (window.matchMedia("(max-width: 768px)").matches) {
         arraySize.max = 30;
         if (Number(arraySize.value) > 30) {
             arraySize.value = 30;
-            arraySizeValue.textContent = 30;
-            generateArray();
         }
     } else {
         arraySize.max = 50;
     }
+    arraySizeValue.textContent = arraySize.value;
 }
 
 function generateArray(){
